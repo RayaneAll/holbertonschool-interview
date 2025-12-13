@@ -26,7 +26,8 @@ def canUnlockAll(boxes):
         if box_idx >= total_boxes:
             continue
         for key in boxes[box_idx]:
-            if isinstance(key, int) and 0 <= key < total_boxes and key not in opened:
+            valid_key = isinstance(key, int) and 0 <= key < total_boxes
+            if valid_key and key not in opened:
                 opened.add(key)
                 keys.append(key)
 
