@@ -25,7 +25,7 @@ def main():
         for line in sys.stdin:
             line_count += 1
             parts = line.split()
-            if len(parts) > 2:
+            if len(parts) >= 2:
                 try:
                     status_code = int(parts[-2])
                     file_size = int(parts[-1])
